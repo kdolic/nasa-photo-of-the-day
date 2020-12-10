@@ -6,6 +6,11 @@ import NasaPhoto from './components/NasaPhoto'
 import NasaInfo from "./components/NasaInfo";
 import NasaHeader from "./components/NasaHeader";
 import NasaFooter from "./components/NasaFooter";
+import styled, {keyframes} from 'styled-components'
+
+const StyledApp = styled.div `
+    background-color: black;
+`;
 
 function App() {
 
@@ -28,12 +33,12 @@ function App() {
 
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <NasaHeader />
       <NasaPhoto title={photo.title} date={photo.date} url={photo.url} />
       <NasaInfo explanation={photo.explanation} />
       <NasaFooter />
-    </div>
+    </StyledApp>
   );
 }
 // MVP
